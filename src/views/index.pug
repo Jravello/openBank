@@ -1,0 +1,28 @@
+html5 
+  head 
+    title= title 
+    style
+      include style.css
+  body 
+    #content
+      h1= message
+      br
+      table#servers
+        thead 
+          tr
+            th N°
+            th Nombre Api 
+            th Fecha Conexion
+            th Status DB
+        tbody 
+          each api, index in data 
+            tr 
+              td= index
+              td= api.name
+              td= api.conectionAtIat
+              td= api.statusDB
+  footer 
+    #contentFooter
+      a=copy
+
+
